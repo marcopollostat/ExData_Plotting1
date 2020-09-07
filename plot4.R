@@ -14,8 +14,8 @@ df <- filter(dt, Date >= "2007-02-01" & Date <= "2007-02-02")
 # where quin = Thu, sex = Fri, and sáb = Sat.
 ##################################################
 
-png("plot4.png", width=480, height=480)
 # PLOT 4
+png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2))
 # 1st plot (line) -  global active power vs Date
 plot(df$DateTime, df$Global_active_power, type = "l", main = NULL, xlab = "", ylab = "Global Active Power")
