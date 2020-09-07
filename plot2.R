@@ -12,5 +12,11 @@ str(df)
 
 # PLOT 2
 plot(df$DateTime, df$Global_active_power, type = "l", main = NULL, xlab = "", ylab = "Global Active Power (kilowatts)")
-dev.copy(png, file = "plot2.png")#, width=480, height=480)
+dev.copy(png, file = "plot2.png", width=480, height=480)
 dev.off()
+
+##################################################
+# Since I'm at a non-English locale, 
+# the labels of x-axes are in Portuguese (Brazil),
+# where quin = Thu, sex = Fri and sáb = Sat.
+##################################################

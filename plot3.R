@@ -17,5 +17,11 @@ lines(df$DateTime, df$Sub_metering_2, type = "l", col = "red", main = NULL, xlab
 lines(df$DateTime, df$Sub_metering_3, type = "l", col = "blue", main = NULL, xlab = "", ylab = "")
 legend("topright", legend = c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
        col=c("black", "red", "blue"), lty=1, cex=0.8)
-dev.copy(png, file = "plot3.png")#, width=480, height=480)
+dev.copy(png, file = "plot3.png", width=480, height=480)
 dev.off()
+
+##################################################
+# Since I'm at a non-English locale, 
+# the labels of x-axes are in Portuguese (Brazil),
+# where quin = Thu, sex = Fri and sáb = Sat.
+##################################################

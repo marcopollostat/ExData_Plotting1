@@ -2,7 +2,7 @@ rm(list=ls())
 
 library(dplyr)
 library(data.table)
-dt <- read.delim("~/energy/data/household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?" )
+dt <- read.delim("~/data/household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?" )
 dt$DateTime <- paste(dt$Date, dt$Time)
 dt[['DateTime']] <- strptime(dt[['DateTime']], format = "%d/%m/%Y %H:%M:%S")
 dt$Date <- as.Date(dt$Date, format = "%d/%m/%Y")
@@ -12,5 +12,11 @@ str(df)
 
 # PLOT 1
 hist(df$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red")
-dev.copy(png, file = "plot1.png")#, width=480, height=480)
+dev.copy(png, file = "plot1.png", width=480, height=480)
 dev.off()
+
+##################################################
+# Since I'm at a non-English locale, 
+# the labels of x-axes are in Portuguese (Brazil),
+# where quin = Thu, sex = Fri and sáb = Sat.
+##################################################
