@@ -2,7 +2,7 @@ rm(list=ls())
 
 library(dplyr)
 library(data.table)
-dt <- read.delim("~/energy/data/household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?" )
+dt <- read.delim("~/data/household_power_consumption.txt", sep = ";", header = TRUE, na.strings = "?" )
 dt$DateTime <- paste(dt$Date, dt$Time)
 dt[['DateTime']] <- strptime(dt[['DateTime']], format = "%d/%m/%Y %H:%M:%S")
 dt$Date <- as.Date(dt$Date, format = "%d/%m/%Y")
