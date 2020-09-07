@@ -17,7 +17,7 @@ df <- filter(dt, Date >= "2007-02-01" & Date <= "2007-02-02")
 # PLOT 4
 png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2))
-# 1st plot (line) -  global active power vs Date
+# 1st plot (histogram) -  global active power
 plot(df$DateTime, df$Global_active_power, type = "l", main = NULL, xlab = "", ylab = "Global Active Power")
 # 2nd plot (line) -  voltage vs Date
 plot(df$DateTime, df$Voltage, type = "l", main = NULL, xlab = "datetime", ylab = "Voltage")
