@@ -11,7 +11,7 @@ df <- filter(dt, Date >= "2007-02-01" & Date <= "2007-02-02")
 ##################################################
 # Since I'm at a non-English locale, 
 # the labels of x-axes are in Portuguese (Brazil),
-# where quin = Thu, sex = Fri and sáb = Sat.
+# where quin = Thu, sex = Fri, and sáb = Sat.
 ##################################################
 
 png("plot4.png", width=480, height=480)
